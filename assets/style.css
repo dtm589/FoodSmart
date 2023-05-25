@@ -1,0 +1,34 @@
+body {
+    background-color: rgb(200, 201, 201);
+}
+
+.center, .center-column, .top, .right, .bottom, .left {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    text-align: center;
+}
+
+.center-column {
+    flex-direction: column;
+}
+
+.top    { align-items:     flex-start; }
+.right  { justify-content: flex-end;   }
+.bottom { align-items:     flex-end;   }
+.left   { justify-content: flex-start; }
+
+.single-spaced, .single-spaced * {
+    line-height: 1;
+}
+
+#nav {
+    background-color:rgb(24, 41, 192);
+    font-size: 1.0em;
+}
+
+#intro {
+    padding-left: 4em;
+    padding-right: 4em;
+    font-weight: 450;
+}

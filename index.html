@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Search grocery products by UPC and create a meal plan">
+    <title>FoodSmart</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <!-- Header/NavBar-->
+    <nav class="hero">
+        <div class="hero-head">
+            <div id="nav" class="columns is-mobile is-marginless heading has-text-weight-bold">
+                <div class="column center left">
+                    <p class="navbar-item has-text-white">FoodSmart</p>
+                </div>
+                <div class="column center right">
+                    <p class="navbar-item has-text-white">UPC Search</p>
+                    <p class="navbar-item has-text-white">Meal Plan</p>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--Little intro section -->
+    <section class="hero">
+        <div class="content">
+            <h1 class="center">All Your Food. One Place.</h1>
+            <p id="intro" class="center">Here at FoodSmart we want to help people with food restrictions and allergies feel more comfortable at
+                the grocery store. By showing detailed information about specific grocery products or creating a daily
+                meal plan that fits you!</p>
+        </div>
+        <!--Form to search by UPC-->
+        <form id="search-form" class="field">
+            <label class="label center">Products UPC</label>
+            <div class="control center">
+                <input id="UPC-input" class="input" type="text" placeholder="UPC">
+                <button type="submit" class="button is-link">Search</button>
+            </div>
+        </form>
+        <!--The searched stuff will display here-->
+        <div class="hero">
+            <div id="display-container" class="content center">
+                <div>
+                    <h2 id="item-name"></h2>
+                    <img id="item-img" src="" alt="">
+                </div>
+                <div>
+                    <p id="item-badges"></p>
+                    <p id="item-fat"></p>
+                    <p id="item-protein"></p>
+                    <p id="item-carbs"></p>
+                    <p id="item-calories"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>
