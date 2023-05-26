@@ -10,15 +10,24 @@ $("#search-form").on("submit", function (event) {
     let UPC = $("#UPC-input").val();
     //ensure something is entered and it is 10 digits, AND ONLY DIGITS
     if (UPC === "" || UPC.length !== 12) {
-        alert("We need to change this to a notification in Bulma");
+        let errorDisplay = $('<div class="notification">Please enter a UPC code with 12 digits.<button class="delete"></button></div>');
+        $("form").after(errorDisplay);        
+
     } else {
         //add to search history list and display item
         currentUPCsearch(UPC);
     }
+    
+    // deletes notification
+    $(".delete").on("click", function(){
+        console.log("buttonClicked")
+        $(".notification").remove();
+    });
 
     //reset input
     $("#UPC-input").val("");
 });
+
 
 
 //make a list of searched cities
