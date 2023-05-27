@@ -2,7 +2,7 @@
 let apiKey = '78cfe3cd7a5b4fcba48601e913f2d073';
 let savedSearches = [];
 
-//make a list of searched cities
+//make a list of searched items
 let searchHistoryList = function (UPC) {
 
     //no duplicate 
@@ -59,7 +59,7 @@ $("#search-form").on("submit", function (event) {
 
     //get UPC
     let UPC = $("#UPC-input").val();
-    //ensure something is entered and it is 10 digits, AND ONLY DIGITS
+    //ensure something is entered and it is 12 digits, AND ONLY DIGITS
     if (UPC === "" || UPC.length !== 12) {
 
         //create the div and add classes and text to it
