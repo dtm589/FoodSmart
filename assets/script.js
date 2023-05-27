@@ -2,32 +2,6 @@
 let apiKey = '78cfe3cd7a5b4fcba48601e913f2d073';
 let savedSearches = [];
 
-//butten event listener on form
-$("#search-form").on("submit", function (event) {
-    event.preventDefault();
-
-    //get UPC
-    let UPC = $("#UPC-input").val();
-    //ensure something is entered and it is 10 digits, AND ONLY DIGITS
-    if (UPC === "" || UPC.length !== 12) {
-        let errorDisplay = $('<div class="notification">Please enter a UPC code with 12 digits.<button class="delete"></button></div>');
-        $("form").after(errorDisplay);        
-
-    } else {
-        //add to search history list and display item
-        currentUPCsearch(UPC);
-    }
-    
-    // deletes notification
-    $(".delete").on("click", function(){
-        console.log("buttonClicked")
-        $(".notification").remove();
-    });
-
-
-
-
-
 //make a list of searched cities
 let searchHistoryList = function (UPC) {
 
@@ -35,15 +9,16 @@ let searchHistoryList = function (UPC) {
     $('.past-search:contains("' + UPC + '")').remove();
 
     //create entry with item name
-    let serachHistoryEntry = $("<h5>");
-    serachHistoryEntry.text(UPC);
+    let searchHistoryEntry = $("<h5>");
+    searchHistoryEntry.addClass("past-search")
+    searchHistoryEntry.text(UPC);
 
     //create container for each entry
     let searchEntryContainer = $("<div>")
 
     //append entry to container, and container to search history container
-    searchEntryContainer.append(serachHistoryEntry);
-    let searchHistoryContainerEl = $("# "); //NEED TO ADD THE ID OF THE CONTAINER IN THE HTML
+    searchEntryContainer.append(searchHistoryEntry);
+    let searchHistoryContainerEl = $("#search-history");
     searchHistoryContainerEl.append(searchEntryContainer);
 
     if (savedSearches.length > 0) {
@@ -54,7 +29,10 @@ let searchHistoryList = function (UPC) {
     //add searched item to array of searches
     savedSearches.push(UPC);
     localStorage.setItem("savedSearches", JSON.stringify(savedSearches));
+
+    $("#UPC-input").val("");
 }
+
 
 //load saved history entries into the container
 let loadSearchHistory = function () {
@@ -67,14 +45,13 @@ let loadSearchHistory = function () {
     }
 
     //parse each history
-    savedSearchHistory - JSON.parse(savedSearchHistory);
+    savedSearchHistory = JSON.parse(savedSearchHistory);
 
     //go through array and make entry for each item
     for (i = 0; i < savedSearchHistory.length; i++) {
         searchHistoryList(savedSearchHistory[i]);
     }
 };
-
 
 //butten event listener on form
 $("#search-form").on("submit", function (event) {
@@ -84,14 +61,37 @@ $("#search-form").on("submit", function (event) {
     let UPC = $("#UPC-input").val();
     //ensure something is entered and it is 10 digits, AND ONLY DIGITS
     if (UPC === "" || UPC.length !== 12) {
-        alert("We need to change this to a notification in Bulma");
+
+        //create the div and add classes and text to it
+        let errorDisplay = $('<div>');
+        errorDisplay.addClass('notification is-danger');
+        errorDisplay.text('Please enter a valid 12 digit UPC code.');
+
+        //create the delete button and add classes to it
+        let errorButton = $('<button>');
+        errorButton.addClass('delete');
+
+        //append the button to the div
+        errorDisplay.append(errorButton);
+
+        //append the div to the error display area
+        let displayArea = $("#search-form");
+        displayArea.append(errorDisplay);
+
+    // deletes notification
+    $(".delete").on("click", function () {
+        console.log("buttonClicked")
+        $(".notification").remove();
+    })
+
     } else {
         //add to search history list and display item
         currentUPCsearch(UPC);
     }
 
-    //reset input
+
     $("#UPC-input").val("");
+
 });
 
 // Will display the current item
@@ -129,10 +129,13 @@ let currentUPCsearch = function (UPC) {
 
             searchHistoryList(UPC)
         })
+        .catch(function (error) {
+            $("#UPC-input").val("");
+        })
 };
 
 // called when an item in the history is clicked and loads it
-$("# ").on("click", "h5", function () {   //NEED TO ADD THE ID OF THE CONTAINER IN THE HTML 
+$("#search-history").on("click", "h5", function () {
     //gets the value of the item clicked, and runs it to out search function
     let previousUPC = $(this).text();
     currentUPCsearch(previousUPC);
