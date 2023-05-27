@@ -84,10 +84,6 @@ $("#search-form").on("submit", function (event) {
         $(".notification").remove();
     })
 
-    //ensure something is entered and it is 10 digits
-    if (UPC === "" || UPC == null || UPC.legnth > 10 || UPC.legnth < 10) {
-        alert("We need to change this to a notification in Bulma");
-        event.preventDefault();
     } else {
         //add to search history list and display item
         currentUPCsearch(UPC);
@@ -105,14 +101,12 @@ let currentUPCsearch = function (UPC) {
         .then(function (response) {
             return response.json();
         })
-        .then(function (responce) {
-            //searchHistoryList(itemName)
-
-            let currentItemContainer = $("#display-container");
+        .then(function (response) {
 
             //add item name, img, badges, fat, protien, carbs, and calories
             let currentName = $("#item-name");
-            currentName.text(responce.title);
+            currentName.text(response.title);
+            //let itemName = currentName.val();
 
             let currentImg = $("#item-img");
             let currentImgSrc = response.images[1];
@@ -131,7 +125,12 @@ let currentUPCsearch = function (UPC) {
             currentCarbs.text("Total Carbs: " + response.nutrition.carbs);
 
             let currentCalories = $("#item-calories");
-            currentCalories.text("Total Calories: " + responce.nutrition.calories);
+            currentCalories.text("Total Calories: " + response.nutrition.calories);
+
+            searchHistoryList(UPC)
+        })
+        .catch(function (error) {
+            $("#UPC-input").val("");
         })
 };
 
