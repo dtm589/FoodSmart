@@ -9,14 +9,14 @@ $("#search-form").on("submit", function (event) {
     //get UPC
     let UPC = $("#UPC-input").val();
 
-    //ensure something is entered and it is 10 digits
-    if (UPC === "" || UPC == null || UPC.legnth > 10 || UPC.legnth < 10) {
-        alert("We need to change this to a notification in Bulma");
-        event.preventDefault();
-    } else {
-        //add to search history list and display item
-        currentUPCsearch(UPC);
-    }
+//ensure something is entered and it is 10 digits
+if (UPC === "" || UPC == null || UPC.trim().length > 10 || isNaN(UPC)) {
+    alert("Please enter a valid UPC code.");
+    event.preventDefault();
+} else {
+    //add to search history list and display item
+    currentUPCsearch(UPC);
+}
 
     //reset input
     $("#UPC-input").val("");
@@ -26,35 +26,35 @@ $("#search-form").on("submit", function (event) {
 let currentUPCsearch = function (UPC) {
     //get data from API
     fetch(`https://api.spoonacular.com/food/products/upc/${UPC}?apiKey=${apiKey}`)
-        .then(function (responce) {
-            return responce.json();
+        .then(function (response) {
+            return response.json();
         })
-        .then(function (responce) {
+        .then(function (response) {
             //searchHistoryList(itemName)
 
             let currentItemContainer = $("#display-container");
 
             //add item name, img, badges, fat, protien, carbs, and calories
             let currentName = $("#item-name");
-            currentName.text(responce.title);
+            currentName.text(response.title);
 
             let currentImg = $("#item-img");
-            let currentImgSrc = responce.images[1];
+            let currentImgSrc = response.images[1];
             currentImg.attr("src", `${currentImgSrc}`)
 
             let currentBadges = $("#item-badges");
-            currentBadges.text(responce.badges + responce.importantBadges);
+            currentBadges.text(response.badges + response.importantBadges);
 
             let currentFat = $("#item-fat");
-            currentFat.text("Total Fat: " + responce.nutrition.fat);
+            currentFat.text("Total Fat: " + response.nutrition.fat);
 
             let currentProtein = $("#item-protein");
-            currentProtein.text("Total Protein: " + responce.nutrition.protein);
+            currentProtein.text("Total Protein: " + response.nutrition.protein);
 
             let currentCarbs = $("#item-carbs");
-            currentCarbs.text("Total Carbs: " + responce.nutrition.carbs);
+            currentCarbs.text("Total Carbs: " + response.nutrition.carbs);
 
             let currentCalories = $("#item-calories");
-            currentCalories.text("Total Calories: " + responce.nutrition.calories);
+            currentCalories.text("Total Calories: " + response.nutrition.calories);
         })
 };
