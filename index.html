@@ -20,8 +20,8 @@
                     <p class="navbar-item has-text-white">FoodSmart</p>
                 </div>
                 <div class="column center right">
-                    <a href="meal-plan" class="navbar-item has-text-white">UPC Search</a>
-                    <a href="upc-search" class="navbar-item has-text-white">Meal Plan</a>
+                    <a href="./index.html" class="navbar-item has-text-white">UPC Search</a>
+                    <a href="./html/indextwo.html" class="navbar-item has-text-white">Meal Plan</a>
                 </div>
             </div>
         </div>
@@ -36,20 +36,21 @@
                 meal plan that fits you!</p>
         </div>
         <!--Form to search by UPC-->
-        <form id="search-form" class="field">
-            <label class="label center">Products UPC</label>
-            <div class="control center">
-                <input id="UPC-input" class="input" type="number" placeholder="UPC">
-                <button type="submit" class="button is-link">Search</button>
-                <div class="history">
-                    <div class="recent-search-history">
-                        <p class="recent-search"></p>
+        <div>
+            <div id="search-history"></div>
+            <form id="search-form" class="field">
+                <label class="label center">Products UPC</label>
+                <div class="control center">
+                    <input id="UPC-input" class="input" type="number" placeholder="UPC">
+                    <button type="submit" class="button is-link">Search</button>
+                    <div class="history">
+                        <div class="recent-search-history">
+                            <p class="recent-search"></p>
+                        </div>
                     </div>
-                
                 </div>
-                
-            </div>
-        </form>
+            </form>
+        </div>
         <!--The searched stuff will display here-->
         <div class="hero">
             <div id="display-container" class="content center-column">
@@ -64,14 +65,6 @@
                     <p id="item-carbs"></p>
                     <p id="item-calories"></p>
                 </div>
-                
-                <div class="history">
-                    <div id="recent-searches">
-                    </div>
-                
-                </div>
-                
-                
             </div>
         </div>
     </section>
