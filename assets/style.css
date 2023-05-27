@@ -32,3 +32,12 @@ body {
     padding-right: 4em;
     font-weight: 450;
 }
+.field{
+    padding-left: 35em;
+    padding-right: 7em;
+}
+
+.history{
+    display: flex;
+    
+}

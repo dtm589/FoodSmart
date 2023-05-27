@@ -2,6 +2,29 @@
 let apiKey = '78cfe3cd7a5b4fcba48601e913f2d073';
 let savedSearches = [];
 
+//butten event listener on form
+$("#search-form").on("submit", function (event) {
+    event.preventDefault();
+
+    //get UPC
+    let UPC = $("#UPC-input").val();
+    //ensure something is entered and it is 10 digits, AND ONLY DIGITS
+    if (UPC === "" || UPC.length !== 12) {
+        let errorDisplay = $('<div class="notification">Please enter a UPC code with 12 digits.<button class="delete"></button></div>');
+        $("form").after(errorDisplay);        
+
+    } else {
+        //add to search history list and display item
+        currentUPCsearch(UPC);
+    }
+    
+    // deletes notification
+    $(".delete").on("click", function(){
+        console.log("buttonClicked")
+        $(".notification").remove();
+    });
+
+
 
 
 
