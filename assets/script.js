@@ -2,6 +2,57 @@
 let apiKey = '78cfe3cd7a5b4fcba48601e913f2d073';
 let savedSearches = [];
 
+
+
+
+//make a list of searched cities
+let searchHistoryList = function (UPC) {
+
+    //no duplicate 
+    $('.past-search:contains("' + UPC + '")').remove();
+
+    //create entry with item name
+    let serachHistoryEntry = $("<h5>");
+    serachHistoryEntry.text(UPC);
+
+    //create container for each entry
+    let searchEntryContainer = $("<div>")
+
+    //append entry to container, and container to search history container
+    searchEntryContainer.append(serachHistoryEntry);
+    let searchHistoryContainerEl = $("# "); //NEED TO ADD THE ID OF THE CONTAINER IN THE HTML
+    searchHistoryContainerEl.append(searchEntryContainer);
+
+    if (savedSearches.length > 0) {
+        let previousSavedSearches = localStorage.getItem("savedSearches");
+        savedSearches = JSON.parse(previousSavedSearches);
+    }
+
+    //add searched item to array of searches
+    savedSearches.push(UPC);
+    localStorage.setItem("savedSearches", JSON.stringify(savedSearches));
+}
+
+//load saved history entries into the container
+let loadSearchHistory = function () {
+    //get previous searches
+    let savedSearchHistory = localStorage.getItem("savedSearches");
+
+    //return if no previous searches
+    if (!savedSearchHistory) {
+        return false;
+    }
+
+    //parse each history
+    savedSearchHistory - JSON.parse(savedSearchHistory);
+
+    //go through array and make entry for each item
+    for (i = 0; i < savedSearchHistory.length; i++) {
+        searchHistoryList(savedSearchHistory[i]);
+    }
+};
+
+
 //butten event listener on form
 $("#search-form").on("submit", function (event) {
     event.preventDefault();
@@ -20,37 +71,6 @@ $("#search-form").on("submit", function (event) {
     $("#UPC-input").val("");
 });
 
-
-//make a list of searched cities
-let searchHistoryList = function (itemName) {
-
-    //no duplicate 
-    $('.past-search:contains("' + UPC + '")').remove();
-
-    //create entry with item name
-    let serachHistoryEntry = $("<h5>");
-    serachHistoryEntry.text(itemName);
-
-    //create container for each entry
-    let searchEntryContainer = $("<div>")
-
-    //append entry to container, and container to search history container
-    searchEntryContainer.append(serachHistoryEntry);
-    let searchHistoryContainerEl = $("# "); //NEED TO ADD THE ID OF THE CONTAINER IN THE HTML
-    searchHistoryContainerEl.append(searchEntryContainer);
-
-    if (savedSearches.length > 0) {
-        let previousSavedSearches = localStorage.getItem("savedSearches");
-        savedSearches = JSON.parse(previousSavedSearches);
-    }
-
-    //add searched item to array of searches
-    savedSearches.push(itemName);
-    localStorage.setItem("savedSearches", JSON.stringify(savedSearches));
-}
-
-//load saved history entries into the container
-
 // Will display the current item
 let currentUPCsearch = function (UPC) {
     //get data from API
@@ -63,7 +83,7 @@ let currentUPCsearch = function (UPC) {
             //add item name, img, badges, fat, protien, carbs, and calories
             let currentName = $("#item-name");
             currentName.text(response.title);
-            let itemName = currentName.val();
+            //let itemName = currentName.val();
 
             let currentImg = $("#item-img");
             let currentImgSrc = response.images[1];
@@ -84,6 +104,19 @@ let currentUPCsearch = function (UPC) {
             let currentCalories = $("#item-calories");
             currentCalories.text("Total Calories: " + response.nutrition.calories);
 
-            searchHistoryList(itemName)
+            searchHistoryList(UPC)
         })
 };
+
+// called when an item in the history is clicked and loads it
+$("# ").on("click", "h5", function () {   //NEED TO ADD THE ID OF THE CONTAINER IN THE HTML 
+    //gets the value of the item clicked, and runs it to out search function
+    let previousUPC = $(this).text();
+    currentUPCsearch(previousUPC);
+
+    //removes that item from the search history 
+    let previousUPCclicked = $(this);
+    previousUPCclicked.remove();
+});
+
+loadSearchHistory();
