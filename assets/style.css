@@ -32,12 +32,12 @@ body {
     padding-right: 4em;
     font-weight: 450;
 }
-.field{
+.field {
     padding-left: 35em;
     padding-right: 7em;
 }
 
-.history{
+.history {
     display: flex;
     position: absolute;
     left: -50%;
@@ -46,8 +46,18 @@ body {
     border: 3px solid green;
 }
 
-.recent-search{
+.recent-search {
     font-size: 120%;
     font-weight: bold;
     padding-left: 29px;
+}
+    
+}
+
+.hidden {
+    display: hidden;
+}
+
+.visible {
+    display: visible;
 }
