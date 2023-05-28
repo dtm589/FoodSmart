@@ -41,3 +41,11 @@ body {
     display: flex;
     
 }
+
+.hidden{
+    display: hidden;
+}
+
+.visible{
+    display: visible;
+}
