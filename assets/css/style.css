@@ -61,10 +61,6 @@ body {
     border: 3px solid green;
 }
 
-.hidden {
-    display: hidden;
-}
-
-.visible {
-    display: visible;
+.select {
+    margin-left: 670px;
 }
