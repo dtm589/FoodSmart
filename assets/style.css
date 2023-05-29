@@ -52,6 +52,13 @@ body {
     padding-left: 29px;
 }
     
+.center-column {
+    padding-bottom: 40%;
+    margin-top: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 3%;
+    border: 3px solid green;
 }
 
 .hidden {
