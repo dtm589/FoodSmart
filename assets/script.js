@@ -84,6 +84,13 @@ $("#search-form").on("submit", function (event) {
         $(".notification").remove();
     })
 
+<<<<<<< Updated upstream
+=======
+    //ensure something is entered and it is 10 digits
+    if (UPC === "" || UPC == null || UPC.length > 10 || UPC.length < 10) {
+        alert("We need to change this to a notification in Bulma");
+        event.preventDefault();
+>>>>>>> Stashed changes
     } else {
         //add to search history list and display item
         currentUPCsearch(UPC);
@@ -102,11 +109,20 @@ let currentUPCsearch = function (UPC) {
             return response.json();
         })
         .then(function (response) {
+<<<<<<< Updated upstream
+=======
+            //searchHistoryList(itemName)
+
+            let currentItemContainer = $("#display-container");
+>>>>>>> Stashed changes
 
             //add item name, img, badges, fat, protien, carbs, and calories
             let currentName = $("#item-name");
             currentName.text(response.title);
+<<<<<<< Updated upstream
             //let itemName = currentName.val();
+=======
+>>>>>>> Stashed changes
 
             let currentImg = $("#item-img");
             let currentImgSrc = response.images[1];
@@ -128,8 +144,11 @@ let currentUPCsearch = function (UPC) {
 
             let currentCalories = $("#item-calories");
             currentCalories.text("Total Calories: " + response.nutrition.calories);
+<<<<<<< Updated upstream
 
             searchHistoryList(UPC)
+=======
+>>>>>>> Stashed changes
         })
         .catch(function (error) {
             $("#UPC-input").val("");
