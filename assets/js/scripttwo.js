@@ -28,14 +28,19 @@ let getOptionsVal = $(function (){
         let options = $("select option:selected").val();
 
 // API key for searching recipes by diet
-let dietOptions = function(recipe) {
+let dietOptions = function() {
     fetch(`https://api.spoonacular.com/recipes/complexSearch?diet=${options}&apiKey=${apiKey}`)
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
             console.log(data);
+            
+
+
+
         })
+
 }
 dietOptions()
 })
@@ -43,4 +48,4 @@ dietOptions()
 
 
 
-// get the recipes by clicking on a drop down option
+// click on diet and recipe pops up
