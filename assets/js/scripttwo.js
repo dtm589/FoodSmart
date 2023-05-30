@@ -53,3 +53,8 @@ let dietOptions = function(recipe) {
 dietOptions()
 })
 });
+
+
+
+
+// click on diet and recipe pops up
