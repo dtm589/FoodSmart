@@ -3,7 +3,7 @@ let apiKey = '78cfe3cd7a5b4fcba48601e913f2d073';
 // creates the header text for the recipe search
 let recipeBox = $("<div>");
 recipeBox.addClass('box center');
-// recipeBox.text('Search Recipes by Dietary Restrictions');
+recipeBox.text('Search Recipes by Dietary Restrictions');
 $(".header").after(recipeBox);
 
 // adds the dropdown box with selections
