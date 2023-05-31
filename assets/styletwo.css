@@ -1,8 +1,10 @@
+html {
+    background-color:  rgb(200, 201, 201);
+}
 body {
     background-color: rgb(200, 201, 201);
 }
 
-<<<<<<< HEAD
 .center,
 .center-column,
 .top,
@@ -92,10 +94,32 @@ body {
     #recipeLink:hover {
         text-decoration: underline;
     }
-=======
+
 #text {
     background-color:rgb(24, 41, 192);
     font-size: 1.0em;
 }
 
->>>>>>> c887943115a7d477087ff28f4989b58466779ee6
+
+.recipes {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    text-align: center;
+}
+
+#bio {
+    padding-left: 20em;
+    padding-right: 20em;
+    font-weight: 450;
+    border-bottom: 3px solid rgb(24, 41, 192);
+    padding: 15px;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    line-height: 1.125;
+}
+
