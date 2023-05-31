@@ -28,10 +28,13 @@ body {
 }
 
 #intro {
-    padding-left: 4em;
-    padding-right: 4em;
+    padding-left: 15em;
+    padding-right: 15em;
     font-weight: 450;
+    border-bottom: 3px solid rgb(24, 41, 192);
+    padding: 15px;
 }
+
 .field {
     padding-left: 35em;
     padding-right: 7em;
