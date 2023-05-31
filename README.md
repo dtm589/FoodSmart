@@ -5,9 +5,12 @@ Depoyed app on GitHub: [https://github.com/dtm589/FoodSmart].
 ## Description:
 ````
 We want to help people with food restrictions and allergies feel more comfortable at the grocery store. 
+Look for products that are labeled as "gluten-free," "dairy-free," "soy-free," or "peanut-free." These products are typically safe for people with food restrictions and allergies.
 You can search for food products according to diatery restrictions like badges, fat, protein, carbs and calories.
 View Foods according to diatery: Users should be able to view items by photos, videos, descriptions, and information about the product they will utimately choose from.
 Eventually a meal plan will be choosen according to diatery restriction.
+//*live link of the page created to display []
+
 ````
 ## Badges
 ````
@@ -17,6 +20,7 @@ Eventually a meal plan will be choosen according to diatery restriction.
 
 ## Visuals
 ````
+![Screenshot (22)](https://github.com/dtm589/FoodSmart/assets/128929426/575450d2-8e44-496f-b10f-6335eecef331)
 
 Include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
 ````
@@ -28,9 +32,9 @@ Include screenshots or even a video (you'll frequently see GIFs rather than actu
 
 * Deployed it to GitHub Pages to be able to accept and respond to user inputs.
 
-* Using at least two server-side APIs is required.
+* Using at least two server-side APIs.
 
-* Using modals will be required instead of the use of alerts, confirms, or prompts.
+* Use modals instead of the use of alerts, confirms, or prompts.
 
 * Use client-side storage for legacy data.
 
@@ -58,11 +62,12 @@ If you need help choosing a product, you can email us at agracenotary@gmail.com
 ## Roadmap
 ````
 For future releases...
+There will be more meals to choose from soon.
 ````
 
 ## Contributors
 ````
-visit our GitHubs: iis4u2nv; dtm589; marbfree; tylerundrwood; _____________;____________.
+visit our GitHubs: iis4u2nv; dtm589; marbfree; tylerundrwood; yungxsuccess; Adrian Carter.
 ````
 
 ## Authors and acknowledgement
