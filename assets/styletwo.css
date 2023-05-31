@@ -2,6 +2,7 @@ body {
     background-color: rgb(200, 201, 201);
 }
 
+<<<<<<< HEAD
 .center,
 .center-column,
 .top,
@@ -91,3 +92,10 @@ body {
     #recipeLink:hover {
         text-decoration: underline;
     }
+=======
+#text {
+    background-color:rgb(24, 41, 192);
+    font-size: 1.0em;
+}
+
+>>>>>>> c887943115a7d477087ff28f4989b58466779ee6
