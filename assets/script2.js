@@ -2,12 +2,12 @@
 let apiKey = '78cfe3cd7a5b4fcba48601e913f2d073';
 
 // add event listener for sumbit button
-$("#diets-form").on("submit", function (event) {
+$("#recipeSelect").on("submit", function (event) {
     event.preventDefault();
 
     //get the value entered in the drop box
     let dietChoice = $("#userSelect").val(); 
-    
+
     //call the function to make the api fetch
     currentdietSearch(dietChoice);
 })
