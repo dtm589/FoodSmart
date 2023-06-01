@@ -6,7 +6,7 @@ $("#diets").on("submit", function (event) {
     event.preventDefault();
 
     //get the value entered in the drop box
-    let dietChoice = $("#dietSelect").val(); 
+    let dietChoice = $("#dietSelect").val();
 
     //call the function to make the api fetch
     currentdietSearch(dietChoice);
@@ -33,7 +33,7 @@ let currentdietSearch = function (dietChoice) {
             let recipeURL1 = $("#recipeLink1");
             let recipeURL1Src = response.meals[0].sourceUrl;
             recipeURL1.attr("href", `${recipeURL1Src}`);
-            recipeURL1.text(recipeURL1Src);
+            recipeURL1.text("View Recipe");
 
             //recipe 2 info
             let recipeName2 = $("#recipeName2");
@@ -46,7 +46,7 @@ let currentdietSearch = function (dietChoice) {
             let recipeURL2 = $("#recipeLink2");
             let recipeURL2Src = response.meals[1].sourceUrl;
             recipeURL2.attr("href", `${recipeURL2Src}`);
-            recipeURL2.text(recipeURL2Src)
+            recipeURL2.text("View Recipe")
 
             //recipe 3 info
             let recipeName3 = $("#recipeName3");
@@ -59,7 +59,7 @@ let currentdietSearch = function (dietChoice) {
             let recipeURL3 = $("#recipeLink3");
             let recipeURL3Src = response.meals[2].sourceUrl;
             recipeURL3.attr("href", `${recipeURL3Src}`);
-            recipeURL3.text(recipeURL3Src);
+            recipeURL3.text("View Recipe");
         })
 
         .catch(function (error) {

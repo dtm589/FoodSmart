@@ -1,68 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Intro git -->
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FoodSmart</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/styletwo.css">
 </head>
-<!-- Header/NavBar-->
-<nav class="hero">
-    <div class="hero-head">
-        <div id="nav" class="columns is-mobile is-marginless heading has-text-weight-bold">
-            <div class="column center left">
-                <p class="navbar-item has-text-white is-size-4">FoodSmart</p>
-            </div>
-            <div class="column center right">
-                <a href="/FoodSmart/index.html" class="navbar-item has-text-white is-size-4">UPC Search</a>
-                <a href="/FoodSmart/html/indextwo.html" class="navbar-item has-text-white is-size-4">Meal Plan</a>
+
+<body>
+    <!-- Header/NavBar-->
+    <nav class="hero">
+        <div class="hero-head">
+            <div id="nav" class="columns is-mobile is-marginless heading has-text-weight-bold">
+                <div class="column center left">
+                    <p class="navbar-item has-text-white is-size-4">FoodSmart</p>
+                </div>
+                <div class="column center right">
+                    <a href="./index.html" class="navbar-item has-text-white is-size-4">UPC Search</a>
+                    <a href="./indextwo.html" class="navbar-item has-text-white is-size-4">Meal Plan</a>
+                </div>
             </div>
         </div>
-    </div>
-</nav>
-<section class="hero">
-    <div class="content">
-        <h1 class="center">All Your Food. One Place.</h1>
-        <p id="intro" class="center">Here at FoodSmart we want to help people with food restrictions and allergies
-            feel more comfortable at
-            the grocery store. By showing detailed information about specific grocery products or creating a daily
-            meal plan that fits you!</p>
-        <div class="container">
-            <form>
-                <div class="field">
-                    <label class="label">Select Recipe:</label>
-                    <div class="control">
-                        <div class="select">
-                            <select id="recipeSelect">
-                                <option value="">Select a recipe</option>
-                                <option value="recipe1">Recipe 1</option>
-                                <option value="recipe2">Recipe 2</option>
-                                <option value="recipe3">Recipe 3</option>
-                                <!-- Add more options as needed -->
-                            </select>
+    </nav>
+    <section class="hero">
+        <div class="content">
+            <h1 class="center">All Your Food. One Place.</h1>
+            <p id="intro" class="center">Here at FoodSmart we want to help people with food restrictions and
+                allergies
+                feel more comfortable at
+                the grocery store. By showing detailed information about specific grocery products or creating a
+                daily
+                meal plan that fits you!</p>
+            <div class="container">
+                <form id="diets">
+                    <div class="field">
+                        <label class="label">Select Diet:</label>
+                        <div class="control">
+                            <div class="select">
+                                <select id="dietSelect">
+                                    <option value="gluten-free">Gluten Free</option>
+                                    <option value="ketogenic">Ketogenic</option>
+                                    <option value="vegetarian">Vegetarian</option>
+                                    <option value="lacto-vegetarian">Lacto-Vegetarian</option>
+                                    <option value="vegan">Vegan</option>
+                                    <option value="pescatarian">Pescatarian</option>
+                                    <option value="paleo">Paleo</option>
+                                    <option value="pescatarian">Primal</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="field">
-                    <div class="control">
-                        <button class="button is-info" type="submit">Submit</button>
+                    <div class="field">
+                        <div class="control">
+                            <button class="button is-info" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+                <div id="recipeInfo">
+                    <div>
+                        <h2 id="recipeName1"></h2>
+                        <img id="recipeImage1" src="" alt=""><br>
+                        <a id="recipeLink1" href="" target="_blank"></a>
+                    </div>
+                    <div>
+                        <h2 id="recipeName2"></h2>
+                        <img id="recipeImage2" src="" alt=""><br>
+                        <a id="recipeLink2" href="" target="_blank"></a>
+                    </div>
+                    <div>
+                        <h2 id="recipeName3"></h2>
+                        <img id="recipeImage3" src="" alt=""><br>
+                        <a id="recipeLink3" href="" target="_blank"></a>
                     </div>
                 </div>
-            </form>
-            <div id="recipeInfo">
-                <h2 id="recipeName"></h2>
-                <img id="recipeImage" src="" alt="Recipe Image">
-                <a id="recipeLink" href="" target="_blank">View Recipe</a>
             </div>
         </div>
-    </div>
-</section>
-<script src="/FoodSmart/assets/script.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./assets/script2.js"></script>
 </body>
+
 
 </html>
