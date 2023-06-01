@@ -113,8 +113,10 @@ let currentUPCsearch = function (UPC) {
             currentImg.attr("src", `${currentImgSrc}`)
 
             let currentBadges = $("#item-badges");
-            currentBadges.text(response.badges + response.importantBadges);
-
+            let otherBadgStr = JSON.parse(JSON.stringify(response.badges).replaceAll("_", " "));
+            let imptBadgStr = JSON.parse(JSON.stringify(response.importantBadges).replaceAll("_", " "));
+            currentBadges.text(otherBadgStr + imptBadgStr);
+            
             let currentFat = $("#item-fat");
             currentFat.text("Total Fat: " + response.nutrition.fat);
 

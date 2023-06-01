@@ -1,0 +1,125 @@
+html {
+    background-color:  rgb(200, 201, 201);
+}
+body {
+    background-color: rgb(200, 201, 201);
+}
+
+.center,
+.center-column,
+.top,
+.right,
+.bottom,
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.center-column {
+    flex-direction: column;
+}
+
+.top {
+    align-items: flex-start;
+}
+
+.right {
+    justify-content: flex-end;
+}
+
+.bottom {
+    align-items: flex-end;
+}
+
+.left {
+    justify-content: flex-start;
+}
+
+.single-spaced,
+.single-spaced * {
+    line-height: 1;
+}
+
+#nav {
+    background-color: rgb(24, 41, 192);
+}
+
+    .hero {
+        background-color: #f5f5f5;
+    }
+
+    .content {
+        text-align: center;
+        padding: 2rem;
+    }
+
+
+    .container {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .field {
+        margin-bottom: 1rem;
+    }
+
+    .select select {
+        width: 100%;
+    }
+
+    #recipeInfo {
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    #recipeName {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #recipeImage {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 0.5rem;
+    }
+
+    #recipeLink {
+        display: block;
+        text-decoration: none;
+        color: #0366d6;
+    }
+
+    #recipeLink:hover {
+        text-decoration: underline;
+    }
+
+#text {
+    background-color:rgb(24, 41, 192);
+    font-size: 1.0em;
+}
+
+
+.recipes {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    text-align: center;
+}
+
+#bio {
+    padding-left: 20em;
+    padding-right: 20em;
+    font-weight: 450;
+    border-bottom: 3px solid rgb(24, 41, 192);
+    padding: 15px;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    line-height: 1.125;
+}
+

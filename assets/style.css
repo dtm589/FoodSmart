@@ -28,16 +28,46 @@ body {
 }
 
 #intro {
-    padding-left: 4em;
-    padding-right: 4em;
+    padding-left: 15em;
+    padding-right: 15em;
     font-weight: 450;
+    border-bottom: 3px solid rgb(24, 41, 192);
+    padding: 15px;
 }
-.field{
+
+.field {
     padding-left: 35em;
     padding-right: 7em;
 }
 
-.history{
+.history {
     display: flex;
+    position: absolute;
+    left: -50%;
+    width: 200px;
+    height: 120px;
+    border: 3px solid green;
+}
+
+.recent-search {
+    font-size: 120%;
+    font-weight: bold;
+    padding-left: 29px;
+}
     
+.center-column {
+    padding-bottom: 40%;
+    margin-top: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 3%;
+    border: 3px solid green;
+}
+
+.hidden {
+    display: hidden;
+}
+
+.visible {
+    display: visible;
 }
