@@ -1,9 +1,6 @@
 html {
     background-color:  rgb(200, 201, 201);
 }
-body {
-    background-color: rgb(200, 201, 201);
-}
 
 .center,
 .center-column,
@@ -44,6 +41,8 @@ body {
 
 #nav {
     background-color: rgb(24, 41, 192);
+    font-size: 1.0em;
+    
 }
 
     .hero {
@@ -53,6 +52,7 @@ body {
     .content {
         text-align: center;
         padding: 2rem;
+        background-color: rgb(200, 201, 201);
     }
 
 
@@ -122,4 +122,6 @@ h1 {
     margin-bottom: 0.5em;
     line-height: 1.125;
 }
-
+.center{
+    border-bottom: 3px solid rgb(24, 41, 192);
+}
