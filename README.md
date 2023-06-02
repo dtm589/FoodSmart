@@ -1,6 +1,6 @@
 # FoodSmart
 ````
-Depoyed app on GitHub: [https://github.com/dtm589/FoodSmart].
+Depoyed app on GitHub: [https://dtm589.github.io/FoodSmart/].
 ```
 ## Description:
 ````
