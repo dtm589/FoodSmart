@@ -20,10 +20,8 @@
                     <p class="navbar-item has-text-white">FoodSmart</p>
                 </div>
                 <div class="column center right">
-
                     <a href="./index.html" class="navbar-item has-text-white">UPC Search</a>
                     <a href="./indextwo.html" class="navbar-item has-text-white">Meal Plan</a>
-
                 </div>
             </div>
         </div>
@@ -38,19 +36,19 @@
                 meal plan that fits you!</p>
         </div>
         <!--Form to search by UPC-->
-        <div>
-            <form id="search-form" class="field">
-                <label class="label center">Products UPC</label>
-                <div class="control center">
+        <div class="columns is-mobile" style="flex-direction: column">
+            <div class="column">
+                <form id="search-form" class="field column">
+                    <label class="label center">Products UPC</label>
                     <input id="UPC-input" class="input" type="number" placeholder="UPC">
                     <button type="submit" class="button is-link">Search</button>
-                    <div class="history">
-                        <div id="search-history" class="recent-search-history">
-                            <p class="recent-search">Search History</p>
-                        </div>
-                    </div>
+                </form>
+            </div>
+            <div class="history column">
+                <div id="search-history" class="recent-search-history">
+                    <p class="recent-search">Search History</p>
                 </div>
-            </form>
+            </div>
         </div>
         <!--The searched stuff will display here-->
         <div class="hero">
@@ -69,7 +67,6 @@
             </div>
         </div>
     </section>
-
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./assets/script.js"></script>
 </body>
