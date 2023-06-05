@@ -1,9 +1,9 @@
 # FoodSmart
-````
+
 https://dtm589.github.io/FoodSmart/
 
 https://github.com/dtm589/FoodSmart
-```
+
 ## Description:
 ````
 We want to help people with food restrictions and allergies feel more comfortable at the grocery store. 
