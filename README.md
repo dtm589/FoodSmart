@@ -1,6 +1,7 @@
 # FoodSmart
 ````
-Depoyed app on GitHub: [https://github.com/dtm589/FoodSmart].
+[Deployed app on GitHub](https://dtm589.github.io/FoodSmart/)
+[Creator of Repo](https://github.com/dtm589/FoodSmart)
 ```
 ## Description:
 ````
@@ -10,19 +11,18 @@ You can search for food products according to diatery restrictions like badges, 
 View Foods according to diatery: Users should be able to view items by photos, videos, descriptions, and information about the product they will utimately choose from.
 Eventually a meal plan will be choosen according to diatery restriction.
 //*live link of the page created to display []
-
-````
-## Badges
-````
-//*find the URL for the badge we want to display.There are many different badge providers, such as Shields.io, Badgen.net, and ReadTheDocs.io.
-[![Badge](url)[(https://i.imgur.com/example.png)](url)
 ````
 
 ## Visuals
 ````
-![Screenshot (22)](https://github.com/dtm589/FoodSmart/assets/128929426/575450d2-8e44-496f-b10f-6335eecef331)
+![UPC Search](https://1drv.ms/i/s!ArpTvLEmcWEAjTZISnXNveUQ1kdL?e=FDXStz)
+![Breakfast](https://spoonacular.com/recipes/your-basic-low-carb-breakfast-1747693)
+![Lunch](https://spoonacular.com/recipes/chicken-spinach-mozzarella-1697831)
+![Dinner](https://spoonacular.com/recipes/6-easy-last-minute-seafood-dinner-ideas-1697799)
 
-Include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+![Lacto-Vegetarian Meal](https://spoonacular.com/moroccan-chickpea-and-lentil-stew-652417)
+![Gluten Free Meal](https://spoonacular.com/fried-brown-rice-643674)
+![Pescatarian](https://spoonacular.com/spanish-sardines-pasta-1697577)
 ````
 
 ## Installation
@@ -50,7 +50,7 @@ Good Day everybody I'm Amazing Grace, I want to introduce you to our fabulous we
 How many of you have ever had at one point or another reaction to a food category that you didn't even know about?
 
 This website is going to give nutrition information to several kinds of dietaries for you to choose a meal option.
-In addditon to options the website will provide badges, fat, protein, carbs and calories content information.
+In addditon to options the website will provide fat, protein, carbs and calories contents information.
 
 You may take any upc symbol and plug it into our fabulous website for a response to the ingredients of that particular product!
 ````
@@ -67,7 +67,7 @@ There will be more meals to choose from soon.
 
 ## Contributors
 ````
-visit our GitHubs: iis4u2nv; dtm589; marbfree; tylerundrwood; yungxsuccess; Adrian Carter.
+visit our GitHubs: iis4u2nv; dtm589; marbfree; tylerundrwood; yungxsuccess.
 ````
 
 ## Authors and acknowledgement
