@@ -1,7 +1,8 @@
 # FoodSmart
 ````
-[Deployed app on GitHub](https://dtm589.github.io/FoodSmart/)
-[Creator of Repo](https://github.com/dtm589/FoodSmart)
+https://dtm589.github.io/FoodSmart/
+
+https://github.com/dtm589/FoodSmart
 ```
 ## Description:
 ````
@@ -15,7 +16,7 @@ Eventually a meal plan will be choosen according to diatery restriction.
 
 ## Visuals
 ````
-![UPC Search](./images/Screenshot%20(28).png)
+![alt text](./images/Screenshot%20(28).png)
 [Breakfast](https://spoonacular.com/recipes/your-basic-low-carb-breakfast-1747693)
 [Lunch](https://spoonacular.com/recipes/chicken-spinach-mozzarella-1697831)
 [Dinner](https://spoonacular.com/recipes/6-easy-last-minute-seafood-dinner-ideas-1697799)
