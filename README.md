@@ -1,7 +1,8 @@
 # FoodSmart
 ````
-[Deployed app on GitHub](https://dtm589.github.io/FoodSmart/)
-[Creator of Repo](https://github.com/dtm589/FoodSmart)
+https://dtm589.github.io/FoodSmart/
+
+https://github.com/dtm589/FoodSmart
 ```
 ## Description:
 ````
@@ -15,14 +16,14 @@ Eventually a meal plan will be choosen according to diatery restriction.
 
 ## Visuals
 ````
-![UPC Search](https://1drv.ms/i/s!ArpTvLEmcWEAjTZISnXNveUQ1kdL?e=FDXStz)
-![Breakfast](https://spoonacular.com/recipes/your-basic-low-carb-breakfast-1747693)
-![Lunch](https://spoonacular.com/recipes/chicken-spinach-mozzarella-1697831)
-![Dinner](https://spoonacular.com/recipes/6-easy-last-minute-seafood-dinner-ideas-1697799)
+![alt text](./images/Screenshot%20(28).png)
+[Breakfast](https://spoonacular.com/recipes/your-basic-low-carb-breakfast-1747693)
+[Lunch](https://spoonacular.com/recipes/chicken-spinach-mozzarella-1697831)
+[Dinner](https://spoonacular.com/recipes/6-easy-last-minute-seafood-dinner-ideas-1697799)
 
-![Lacto-Vegetarian Meal](https://spoonacular.com/moroccan-chickpea-and-lentil-stew-652417)
-![Gluten Free Meal](https://spoonacular.com/fried-brown-rice-643674)
-![Pescatarian](https://spoonacular.com/spanish-sardines-pasta-1697577)
+[Lacto-Vegetarian Meal](https://spoonacular.com/moroccan-chickpea-and-lentil-stew-652417)
+[Gluten Free Meal](https://spoonacular.com/fried-brown-rice-643674)
+[Pescatarian](https://spoonacular.com/spanish-sardines-pasta-1697577)
 ````
 
 ## Installation
